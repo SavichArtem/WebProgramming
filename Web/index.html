@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body style="display: flex; justify-content: center; margin: 0;">
+    <div style="overflow: hidden; display: flex; flex-direction: column; border: 2px solid black; max-width:1100px;">
+        <header id="main" style="background-color: aquamarine; border-bottom: 2px solid black;">
+            <nav>
+                <ul style="float: right; display: flex; font-size: 20px;">
+                    <li style="margin-right: 30px;"><a href="#main">Главная</a></li>
+                    <li style="margin-right: 30px;"><a href="#section">Основное</a></li>
+                    <li style="margin-right: 30px;"><a href="#aside">Навыки</a></li>
+                    <li style="margin-right: 30px;"><a href="#footer">Контакты</a></li>
+                </ul> 
+            </nav>
+            <h1 style="text-align: left; padding-left: 30px; padding-top: 40px; font-size: 40px;">Савич Артём Александрович</h1>
+         </header>
+    <main>
+        <aside id="aside" style="border-right: 2px solid black; float:left; width:30%; height:auto; margin: auto; text-align: center;">
+            <img src="/assets/avatar.png" alt="Аватар" style="padding-top: 30px;">
+            <hr style="margin: 30px auto; border: 1px solid black">
+            <nav>
+                <h3 style="padding-left: 30px; font-size: 25px;">Мои навыки:</h3>
+                <ol style="text-align: left;">
+                    <li>Владею языком программирования <b>C#</b></li>
+                    <li>Умею работать с <b>SQL</b></li>
+                    <li>Знаю основы работы с <b>Git</b></li>
+                    <li>Умею работать в команде</li>
+                </ol>
+            </nav>
+            <article style="padding-left: 30px; text-align: left;">
+                <h3 style="font-size: 25px; text-align: center;">Примеры кода:</h3>
+                <code>
+                    static void ShowStudent(Student[] students) <br>
+                    {<br>
+                        for (int i = 0; i &lt; students.Length; i++) <br>
+                        { <br>
+                            Console.WriteLine($"Студент [{i + 1}]"); <br>
+                            Console.WriteLine($"Id студента: {students[i].Id}"); <br>
+                            Console.WriteLine($"ФИО: {students[i].Name}"); <br>
+                            Console.WriteLine($"Группа: { students[i].Group}\n"); <br>
+                        } <br>
+                    } <br>
+                </code>
+                <br>
+                <code>
+                    static Status[] ReadStatusesFromFile(StreamReader statusPath) <br>
+                    { <br>
+                        string[] lines;<br>
+                        using (StreamReader srStat = new("..\\..\\..\\Status.txt")) <br>
+                        { <br>
+                            lines = srStat.ReadToEnd().Split('\n'); <br>
+                        } <br>
+                        int length = lines.Length / 3; <br>
+                        Status[] stat = new Status[length]; <br>
+                        for (int i = 0; i &lt; length; i++) <br>
+                        { <br>
+                              stat[i] = ReadStatusFromFile(statusPath); <br>
+                            } <br>
+                            return stat; <br>
+                        } <br>
+                </code>
+            </article>
+            <h3 style="font-size: 25px; text-align: center;">Уровень английского - B1</h3>
+        </aside>
+        <section id="section" style="text-align: center;">
+            <header>
+                <h2 style="font-size: 40px;">Обо мне</h2>
+                <p style="font-size: 25px;"> 
+                    Я начинающий программист и моя цель — стать квалифицированным разработчиком программного обеспечения.
+                    Мои приоритеты на данный момент — это углубление знаний в языках программирования.
+                    Сейчас я активно изучаю язык программирования С# и основы веб-разработки.
+                    Я считаю, что мои сильные стороны — это умение работать в команде
+                    и способность быстро усваивать новую информацию. Я стремлюсь постоянно развиваться, чтобы стать ценным специалистом в своей области.
+                    Я открыт к новым знаниям и готов работать над сложными задачами, чтобы улучшать свои навыки.
+                </p>
+            </header>
+        </section>
+        <section style="text-align: center; ">
+            <header>
+                <h2 style ="font-size: 30px; margin: 0;">Опыт работы</h2>
+                <p style="font-size: 25px;"> 
+                    Сверстал CV, в котором отобразил информацию о себе, свои профессиональные достижения и навыки. <br>
+                    В ходе выполнения проекта улучшил свои навыки вёрстки, а также изучил новые теги, которые применил в CV. <br>
+                    Ссылка на страницу проекта: <a href="http://127.0.0.1:5500/index.html">http://127.0.0.1:5500/index.html</a>. <br>
+                </p>
+            </header>
+        </section>
+    </main>
+    <footer id="footer" style="border-top: 2px solid black; padding-left: 30px; background-color: aquamarine;">
+        <h3 style="margin: 0; font-size: 25px;">Связаться со мной:</h3>
+        <ul style="text-align: left; margin: 0; padding: 0;">
+            <li style="margin-right: 40px;"><a href="savichaa.pir231@gmail.com">savichaa.pir231@gmail.com</a></li>
+            <li style="margin-right: 40px;">+375333618684</li>
+            <li style="margin-right: 40px;"><a href="https://vk.com/id252364585">Вконтакте</a></li>
+        </ul> 
+    </footer>
+    </div>
+</body>
+</html>
