@@ -1,1 +1,1 @@
-https://savichartem.github.io/WebProgramming/Web/
+https://savichartem.github.io/WebProgramming/cv
